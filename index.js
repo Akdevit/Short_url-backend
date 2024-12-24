@@ -6,7 +6,7 @@ const urlRouter = require("./routers/url");
 const URL = require("./module/url");
 
 // Connect to MongoDB
-connectTomongoDb("mongodb://localhost:27017/short-url")
+connectTomongoDb("enter mongo db url here")
   .then(() => console.log("Connected to MongoDB..."))
   .catch((err) => console.error("Failed to connect to MongoDB:", err));
 
