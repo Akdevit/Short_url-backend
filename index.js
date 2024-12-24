@@ -6,7 +6,7 @@ const urlRouter = require("./routers/url");
 const URL = require("./module/url");
 
 // Connect to MongoDB
-connectTomongoDb("enter mongo db url here")
+connectTomongoDb("mongodb://localhost:27017/short-url")
   .then(() => console.log("Connected to MongoDB..."))
   .catch((err) => console.error("Failed to connect to MongoDB:", err));
 
@@ -15,7 +15,7 @@ app.use(express.json());
 app.use("/url", urlRouter);
 
 
-// Redirect
+// Redirect route
 app.get("/:shortid", async (req, res) => {
   const shortid = req.params.shortid;
   try {
